@@ -18,5 +18,12 @@ function fizzBuzz(arr) {
     return fizzBuzzArray;
 }
 
+function reduceNumbers(arr) {
+    let numbersOnly = [];
+    for (element of arr) {
+        if (Number.isInteger(element)) { numbersOnly.push(element) }
+    }
+    return numbersOnly.reduce((total, number) => total + number, 0);
+}
 
-console.log(fizzBuzz(range(1, 100)))
+console.log(reduceNumbers(fizzBuzz(range(1, 100))));
